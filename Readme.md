@@ -151,10 +151,4 @@ En este mismo repositorio podras encontrar algunos [links de ayuda](hhttps://git
   
 <br/>
 
-## **Deadlines importantes**
 
-+ Apertura de formularios de entrega de proyectos: **Miercoles 28, 20:00 hs gmt -3**
-
-+ Cierre de formularios de entrega de proyectos: **Jueves 29, 22:00hs gmt-3**
-  
-+ Demo: **Viernes 30, 20:00hs gmt-3*** 
