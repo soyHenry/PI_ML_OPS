@@ -54,7 +54,7 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 
 <br/>
 
-`Lee de nuevo arriba y asegurate de que viste la parte donde pedimos _solamente_ estas transformaciones` :sunglasses:
+`Lee de nuevo arriba y asegurate de que viste la parte donde pedimos *solamente* estas transformaciones` :sunglasses:
 
 **`Desarrollo API`**:   Propones disponibilizar los datos de la empresa usando el framework ***FastAPI***. Las consultas que propones son las siguientes:
 
