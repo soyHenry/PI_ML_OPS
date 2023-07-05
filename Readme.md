@@ -67,7 +67,7 @@ Deben crear 6 funciones para los endpoints que se consumirán en la API, recuerd
          
 
 + def **peliculas_duracion( *`Pelicula`: str* )**:
-    Se ingresa una pelicula. Debe devolver la la duracion y el año.
+    Se ingresa una pelicula. Debe devolver la duracion y el año.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *`X` . Duración: `x`. Año: `xx`*
 
