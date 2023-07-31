@@ -52,7 +52,7 @@ Deben crear 6 funciones para los endpoints que se consumirán en la API, recuerd
 + def **specs( *`Año`: str* )**:
     Se ingresa un año y devuelve una lista con los 5 specs que más se repiten en el mismo en el orden correspondiente. 
 
-+ def **eatlyacces( *`Año`: str* )**:
++ def **earlyacces( *`Año`: str* )**:
     Cantidad de juegos lanzados en un año con early access.
 
 + def **sentiment( *`Año`: str* )**:
