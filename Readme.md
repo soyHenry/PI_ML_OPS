@@ -44,7 +44,7 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 Deben crear 6 funciones para los endpoints que se consumirán en la API, recuerden que deben tener un decorador por cada una (@app.get(‘/’)).
 
 + def **genero( *`Año`: str* )**:
-    Se ingresa un año y devuelve una lista con los 5 géneros más vendidos en el orden correspondiente.
+    Se ingresa un año y devuelve una lista con los 5 géneros más ofrecidos en el orden correspondiente.
 
 + def **juegos( *`Año`: str* )**:
     Se ingresa un año y devuelve una lista con los juegos lanzados en el año.
@@ -85,7 +85,7 @@ Ya los datos están limpios, ahora es tiempo de investigar las relaciones que ha
 Una vez que toda la data es consumible por la API, está lista para consumir por los departamentos de Analytics y Machine Learning, y nuestro EDA nos permite entender bien los datos a los que tenemos acceso, es hora de entrenar nuestro modelo de machine learning para armar un modelo de predicción. El mismo deberá basarse en características como Género, Año, Metascore y/o las que creas adecuadas. Tu líder pide que el modelo derive en un GET/POST en la API simil al siguiente formato:
 
 + def **predicción( *`genero, earlyaccess = True/False, (Variables que elijas)`* )**:
-    Ingresando estos parámetros, deberíamos recibir el precio y **RMC**.
+    Ingresando estos parámetros, deberíamos recibir el precio y **RMSE**.
 
 **`Video`**: Necesitas que al equipo le quede claro que tus herramientas funcionan realmente! Haces un video mostrando el resultado de las consultas propuestas y de tu modelo de ML entrenado! Recuerda presentarte, contar muy brevemente de que trata el proyecto y lo que vas a estar mostrando en el video.
 Para grabarlo, puedes usar la herramienta Zoom, haciendo una videollamada y grabando la pantalla, aunque seguramente buscando, encuentres muchas formas mas. 😉
@@ -116,7 +116,7 @@ Aqui te sintetizamos que es lo que consideramos un MVP aprobatorio, y la diferen
 
 ## **Fuente de datos**
 
-+ [Dataset](https://drive.google.com/drive/folders/1HqBG2-sUkz_R3h1dZU5F2uAzpRn7BSpj?usp=drive_link): Carpeta con los 2 archivos con datos que requieren ser procesados (movies_dataset.csv y credits.csv), tengan en cuenta que hay datos que estan anidados (un diccionario o una lista como valores en la fila).
++ [Dataset](https://drive.google.com/drive/folders/1HqBG2-sUkz_R3h1dZU5F2uAzpRn7BSpj?usp=drive_link): Carpeta con el archivo que requieren ser procesados, tengan en cuenta que hay datos que estan anidados (un diccionario o una lista como valores en la fila).
 + [Diccionario de datos](https://docs.google.com/spreadsheets/d/1-t9HLzLHIGXvliq56UE_gMaWBVTPfrlTf2D9uAtLGrk/edit?usp=drive_link): Diccionario con algunas descripciones de las columnas disponibles en el dataset.
 <br/>
 
