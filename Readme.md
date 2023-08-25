@@ -37,7 +37,7 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 
 ## **Propuesta de trabajo (requerimientos de aprobación)**
 
-**`Transformaciones`**:  Para este MVP no necesitas transformar los datos dentro del dataset pero trabajaremos en leer el dataset con el formato correcto. Pueden eliminar las columnas que no necesitan para responder las consultas o preparar los modelos de aprendizaje automático, y de esa manera optimizar el rendimiento de la API y el entrenamiento del modelo.
+**`Transformaciones`**:  Para este MVP debes transformar los archivos desanidandolos para poder realizar las consultas que te piden. Pueden eliminar las columnas que no necesitan para responder las consultas o preparar los modelos de aprendizaje automático, y de esa manera optimizar el rendimiento de la API y el entrenamiento del modelo.
 
 **`Feature Engineering`**:  En el dataset *user_reviews* se incluyen reseñas de juegos hechos por distintos usuarios, deben crear la columna ***'sentiment_analysis'*** aplicando análisis de sentimiento con NLP con la siguiente escala: debe tomar el valor '0' si es malo, '1' si es neutral y '2' si es positivo. Esta nueva columna debe reemplazar la de user_reviews.review, para facilitar el trabajo de los modelos de machine learning y el análisis de datos. De no ser posible este análisis por estar ausente la reseña escrita, debe tomar el valor de '1'.
 
