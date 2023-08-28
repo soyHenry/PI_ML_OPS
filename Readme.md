@@ -61,12 +61,12 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 + def **developer( *`género` : str* )**:
     `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
 Ejemplo de salida:
-    | Activision |||
-    |----------|----------|----------|
-    | Año  | Contenido Free  |   |
-    | 2023   | 27% |    |
-    | 2022    | 25%   | |
-    | xxxx    | xx%   | |
+    | Activision ||
+    |----------|----------|
+    | Año  | Contenido Free  |
+    | 2023   | 27% |
+    | 2022    | 25%   |
+    | xxxx    | xx%   |
 
 
 + def **sentiment_analysis( *`empresa desarrolladora` : str* )**:
