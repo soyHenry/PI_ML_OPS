@@ -37,27 +37,30 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 
 ## **Propuesta de trabajo (requerimientos de aprobación)**
 
-**`Transformaciones`**:  Para este MVP debes transformar los archivos desanidandolos para poder realizar las consultas que te piden. Pueden eliminar las columnas que no necesitan para responder las consultas o preparar los modelos de aprendizaje automático, y de esa manera optimizar el rendimiento de la API y el entrenamiento del modelo.
+**`Transformaciones`**:  Para este MVP debes transformar los archivos desanidandolos para poder realizar las consultas que nos piden. Pueden eliminar las columnas que no necesitan para responder las consultas o preparar los modelos de aprendizaje automático, y de esa manera optimizar el rendimiento de la API y el entrenamiento del modelo.
 
 **`Feature Engineering`**:  En el dataset *user_reviews* se incluyen reseñas de juegos hechos por distintos usuarios, deben crear la columna ***'sentiment_analysis'*** aplicando análisis de sentimiento con NLP con la siguiente escala: debe tomar el valor '0' si es malo, '1' si es neutral y '2' si es positivo. Esta nueva columna debe reemplazar la de user_reviews.review, para facilitar el trabajo de los modelos de machine learning y el análisis de datos. De no ser posible este análisis por estar ausente la reseña escrita, debe tomar el valor de '1'.
 
 **`Desarrollo API`**:   Propones disponibilizar los datos de la empresa usando el framework ***FastAPI***. Las consultas que propones son las siguientes:
 
-Deben crear 6 funciones para los endpoints que se consumirán en la API, recuerden que deben tener un decorador por cada una (@app.get(‘/’)).
+Deben crear las siguientes funciones para los endpoints que se consumirán en la API, recuerden que deben tener un decorador por cada una (@app.get(‘/’)).
 
-+ def **genero( *`Año`: str* )**:
-    Se ingresa un año y devuelve una lista con los 5 géneros más ofrecidos en el orden correspondiente.
++ def **userdata( *`User_id` : str* )**:
+    Debe devolver `cantidad` de dinero gastado por el usuario, `porcentaje` de recomendación en base a reviews.recommend y `cantidad de items`
 
-+ def **juegos( *`Año`: str* )**:
-    Se ingresa un año y devuelve una lista con los juegos lanzados en el año.
++ def **countreviews( *`YYYY-MM-DD` y `YYYY-MM-DD` : str* )**:
+    `Cantidad de usuarios` que realizaron reviews entre las fechas dadas y, el `porcentaje` de recomendación de los mismos en base a reviews.recommend.
 
-+ def **specs( *`Año`: str* )**:
-    Se ingresa un año y devuelve una lista con los 5 specs que más se repiten en el mismo en el orden correspondiente. 
++ def **genre( *`género` : str* )**:
+    Devuelve el `puesto` en el que se encuentra un género sobre el ranking de los mismos analizado bajo la columna PlayTimeForever. 
 
-+ def **earlyacces( *`Año`: str* )**:
-    Cantidad de juegos lanzados en un año con early access.
++ def **userforgenre( *`género` : str* )**:
+    `Top 5` de usuarios con más horas de juego en el género dado.
 
-+ def **sentiment( *`Año`: str* )**:
++ def **developer( *`género` : str* )**:
+    `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
+
++ def **sentiment( *`empresa desarrolladora` : str* )**:
     Según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento. 
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *{Negative = 182, Neutral = 120, Positive = 278}*
@@ -84,7 +87,7 @@ Ya los datos están limpios, ahora es tiempo de investigar las relaciones que ha
 
 **`Modelo de aprendizaje automático`**: 
 
-Una vez que toda la data es consumible por la API, está lista para consumir por los departamentos de Analytics y Machine Learning, y nuestro EDA nos permite entender bien los datos a los que tenemos acceso, es hora de entrenar nuestro modelo de machine learning para armar un **sistema de recomendación**. Para ello, les ofrecen dos propuestas de trabajo: En la primera, el modelo deberá tener una relación ítem-ítem, esto es se toma un item, en base a que tan similar esa ese ítem al resto, se recomiendan similares. Aquí el input es un juego y el output es una lista de juegos recomendados, para ello recomendamos aplicar la *similitud del coseno*. 
+Una vez que toda la data es consumible por la API, está lista para consumir por los departamentos de Analytics y Machine Learning, y nuestro EDA nos permite entender bien los datos a los que tenemos acceso, es hora de entrenar nuestro modelo de machine learning para armar un **sistema de recomendación**. Para ello, les ofrecen dos propuestas de trabajo utilizando filtrado colaborativo: En la primera, el modelo deberá tener una relación ítem-ítem, esto es se toma un item, en base a que tan similar esa ese ítem al resto, se recomiendan similares, basado en contenido. Aquí el input es un juego y el output es una lista de juegos recomendados, para ello recomendamos aplicar la *similitud del coseno*. 
 La otra propuesta para el sistema de recomendación debe aplicar el filtro user-item, esto es tomar un usuario, se encuentran usuarios similares y se recomiendan ítems que a esos usuarios similares les gustaron. En este caso el input es un usuario y el output es una lista de juegos que se le recomienda a ese usuario, en general se explican como “A usuarios que son similares a vos también les gustó…”. 
 Deben crear al menos **uno** de los dos sistemas de recomendación (Si se atreven a tomar el desafío, para mostrar su capacidad al equipo, ¡pueden hacer ambos!). Tu líder pide que el modelo derive obligatoriamente en un GET/POST en la API simil al siguiente formato:
 
@@ -106,7 +109,7 @@ Para grabarlo, puedes usar la herramienta Zoom, haciendo una videollamada y grab
 
 ## **Criterios de evaluación**
 
-**`Código`**: Prolijidad de código, uso de clases y/o funciones, en caso de ser necesario, código comentado. 
+**`Código`**: Prolijidad de código, uso de clases y/o funciones, en caso de ser necesario, código comentado. Se tendrá en cuenta el trato de los valores str como `COUNter-strike` / `COUNTER-STRIKE` / `counter-strike`.
 
 **`Repositorio`**: Nombres de archivo adecuados, uso de carpetas para ordenar los archivos, README.md presentando el proyecto y el trabajo realizado. Recuerda que este último corresponde a la guía de tu proyecto, no importa que tan corto/largo sea siempre y cuando tu 'yo' + 1.5 AÑOS pueda entenderlo con facilidad. 
 
