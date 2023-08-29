@@ -58,7 +58,7 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 + def **userforgenre( *`género` : str* )**:
     `Top 5` de usuarios con más horas de juego en el género dado, con su URL y user_id.
 
-+ def **developer( *`género` : str* )**:
++ def **developer( *`desarrollador` : str* )**:
     `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
 Ejemplo de salida:
     | Activision ||
