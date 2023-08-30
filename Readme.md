@@ -69,7 +69,7 @@ Ejemplo de salida:
     | xxxx    | xx%   |
 
 
-+ def **sentiment_analysis( *`año` : str* )**:
++ def **sentiment_analysis( *`año` : int* )**:
     Según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento. 
 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *{Negative = 182, Neutral = 120, Positive = 278}*
