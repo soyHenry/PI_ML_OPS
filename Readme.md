@@ -56,7 +56,7 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
     Devuelve el `puesto` en el que se encuentra un género sobre el ranking de los mismos analizado bajo la columna PlayTimeForever. 
 
 + def **userforgenre( *`género` : str* )**:
-    `Top 5` de usuarios con más horas de juego en el género dado, con su URL y user_id.
+    `Top 5` de usuarios con más horas de juego en el género dado, con su URL (del user) y user_id.
 
 + def **developer( *`desarrollador` : str* )**:
     `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
