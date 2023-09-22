@@ -58,6 +58,10 @@ Streamlit
 Gradio:
   
  + https://gradio.app/
+
+ ### WSL 2 para utilizar Docker en Windows
+
+ + https://learn.microsoft.com/es-es/windows/wsl/tutorials/wsl-containers
   
 ### Artículos interesantes
  
