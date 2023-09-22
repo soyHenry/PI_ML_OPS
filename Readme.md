@@ -46,35 +46,31 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 <sub> Debes crear las siguientes funciones para los endpoints que se consumirán en la API, recuerden que deben tener un decorador por cada una (@app.get(‘/’)).<sub/>
 
 
-+ def **userdata( *`User_id` : str* )**:
-    Debe devolver `cantidad` de dinero gastado por el usuario, el `porcentaje` de recomendación en base a reviews.recommend y `cantidad de items`.
++ def **PlayTimeGenre( *`genero` : str* )**:
+    Debe devolver `anio` con mas horas jugadas para dicho género.
+  
+Ejemplo de retorno: {"Año con más horas jugadas para Género X" : 2013}
 
-+ def **countreviews( *`YYYY-MM-DD` y `YYYY-MM-DD` : str* )**:
-    `Cantidad de usuarios` que realizaron reviews entre las fechas dadas y, el `porcentaje` de recomendación de los mismos en base a reviews.recommend.
++ def **UserForGenre( *`genero` : str* )**:
+    Debe devolver el usuario que acumula más horas jugadas para el género dado y una lista de la acumulación de horas jugadas por año.
 
-+ def **genre( *`género` : str* )**:
-    Devuelve el `puesto` en el que se encuentra un género sobre el ranking de los mismos analizado bajo la columna PlayTimeForever. 
+Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjss09sdf,
+			     "Horas jugadas":[{Año: 2013, Horas: 203}, {Año: 2012, Horas: 100}, {Año: 2011, Horas: 23}]}
 
-+ def **userforgenre( *`género` : str* )**:
-    `Top 5` de usuarios con más horas de juego en el género dado, con su URL (del user) y user_id.
++ def **UsersRecommend( *`anio` : int* )**:
+   Devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado. (reviews.recommend = True y comentarios positivos/neutrales)
+  
+Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
-+ def **developer( *`desarrollador` : str* )**:
-    `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
-Ejemplo de salida:
-    | Activision ||
-    |----------|----------|
-    | Año  | Contenido Free  |
-    | 2023   | 27% |
-    | 2022    | 25%   |
-    | xxxx    | xx%   |
-
++ def **UsersNotRecommend( *`anio` : int* )**:
+   Devuelve el top 3 de juegos MENOS recomendados por usuarios para el año dado. (reviews.recommend = False y comentarios negativos)
+  
+Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
 + def **sentiment_analysis( *`año` : int* )**:
     Según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento. 
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *{Negative = 182, Neutral = 120, Positive = 278}*
-
-
+Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278}
 
 <br/>
 
