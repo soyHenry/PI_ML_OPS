@@ -1,3 +1,9 @@
+### Interactuar con AWS S3
+
+BOTO3 Python SDK
+ + https://boto3.amazonaws.com/v1/documentation/api/1.9.42/reference/services/s3.html&ved=2ahUKEwjp-r_k-8GBAxUAqJUCHVFLAVwQFnoECCQQAQ&usg=AOvVaw1JlKmo7ENJIUgxxlmVnbry
+ + https://github.com/boto/boto3
+
 ### Orquestadores
 
 Airflow en Astronomer
