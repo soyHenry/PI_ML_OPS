@@ -47,7 +47,7 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 
 
 + def **PlayTimeGenre( *`genero` : str* )**:
-    Debe devolver `anio` con mas horas jugadas para dicho género.
+    Debe devolver `año` con mas horas jugadas para dicho género.
   
 Ejemplo de retorno: {"Año con más horas jugadas para Género X" : 2013}
 
@@ -57,12 +57,12 @@ Ejemplo de retorno: {"Año con más horas jugadas para Género X" : 2013}
 Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjss09sdf,
 			     "Horas jugadas":[{Año: 2013, Horas: 203}, {Año: 2012, Horas: 100}, {Año: 2011, Horas: 23}]}
 
-+ def **UsersRecommend( *`anio` : int* )**:
++ def **UsersRecommend( *`año` : int* )**:
    Devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado. (reviews.recommend = True y comentarios positivos/neutrales)
   
 Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
-+ def **UsersNotRecommend( *`anio` : int* )**:
++ def **UsersNotRecommend( *`año` : int* )**:
    Devuelve el top 3 de juegos MENOS recomendados por usuarios para el año dado. (reviews.recommend = False y comentarios negativos)
   
 Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
@@ -76,7 +76,7 @@ Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278}
 
 
 > `Importante`<br>
-El MVP _tiene_ que ser una API que pueda ser consumida segun los criterios de [API REST o RESTful](https://rockcontent.com/es/blog/api-rest/). Algunas herramientas como por ejemplo, Streamlit, si bien pueden brindar una interfaz de consulta, no cumplen con las condiciones para ser consideradas una API, sin workarounds.
+El MVP _tiene_ que ser una API que pueda ser consumida segun los criterios de [API REST o RESTful](https://rockcontent.com/es/blog/api-rest/) desde cualquier dispositivo conectado a internet. Algunas herramientas como por ejemplo, Streamlit, si bien pueden brindar una interfaz de consulta, no cumplen con las condiciones para ser consideradas una API, sin workarounds.
 
 
 **`Deployment`**: Conoces sobre [Render](https://render.com/docs/free#free-web-services) y tienes un [tutorial de Render](https://github.com/HX-FNegrete/render-fastapi-tutorial) que te hace la vida mas fácil :smile: . También podrías usar [Railway](https://railway.app/), o cualquier otro servicio que permita que la API pueda ser consumida desde la web.
