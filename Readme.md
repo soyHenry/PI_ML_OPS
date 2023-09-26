@@ -49,7 +49,7 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 + def **PlayTimeGenre( *`genero` : str* )**:
     Debe devolver `año` con mas horas jugadas para dicho género.
   
-Ejemplo de retorno: {"Año con más horas jugadas para Género X" : 2013}
+Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X" : 2013}
 
 + def **UserForGenre( *`genero` : str* )**:
     Debe devolver el usuario que acumula más horas jugadas para el género dado y una lista de la acumulación de horas jugadas por año.
