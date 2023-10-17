@@ -46,10 +46,18 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 <sub> Debes crear las siguientes funciones para los endpoints que se consumirán en la API, recuerden que deben tener un decorador por cada una (@app.get(‘/’)).<sub/>
 
 
-+ def **PlayTimeGenre( *`genero` : str* )**:
-    Debe devolver `año` con mas horas jugadas para dicho género.
-  
-Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X" : 2013}
++ def **developer( *`desarrollador` : str* )**:
+    `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
+Ejemplo de salida:
+    | Activision ||
+    |----------|----------|
+    | Año  | Contenido Free  |
+    | 2023   | 27% |
+    | 2022    | 25%   |
+    | xxxx    | xx%   |
+
++ def **userdata( *`User_id` : str* )**:
+    Debe devolver `cantidad` de dinero gastado por el usuario, el `porcentaje` de recomendación en base a reviews.recommend y `cantidad de items`.
 
 + def **UserForGenre( *`genero` : str* )**:
     Debe devolver el usuario que acumula más horas jugadas para el género dado y una lista de la acumulación de horas jugadas por año.
@@ -57,24 +65,18 @@ Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X"
 Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjss09sdf,
 			     "Horas jugadas":[{Año: 2013, Horas: 203}, {Año: 2012, Horas: 100}, {Año: 2011, Horas: 23}]}
 
-+ def **UsersRecommend( *`año` : int* )**:
-   Devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado. (reviews.recommend = True y comentarios positivos/neutrales)
-  
-Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
-
 + def **UsersWorstDeveloper( *`año` : int* )**:
    Devuelve el top 3 de desarrolladoras con juegos MENOS recomendados por usuarios para el año dado. (reviews.recommend = False y comentarios negativos)
   
 Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
-+ def **sentiment_analysis( *`empresa desarrolladora` : str* )**:
-    Según la empresa desarrolladora, se devuelve un diccionario con el nombre de la desarrolladora como llave y una lista con la cantidad total 
++ def **sentiment_analysis( *`desarrolladora` : str* )**:
+    Según el desarrollador/developer, se devuelve un diccionario con el nombre del desarrollador como llave y una lista con la cantidad total 
     de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento como valor. 
 
 Ejemplo de retorno: {'Valve' : [Negative = 182, Neutral = 120, Positive = 278]}
 
 <br/>
-
 
 > `Importante`<br>
 El MVP _tiene_ que ser una API que pueda ser consumida segun los criterios de [API REST o RESTful](https://rockcontent.com/es/blog/api-rest/) desde cualquier dispositivo conectado a internet. Algunas herramientas como por ejemplo, Streamlit, si bien pueden brindar una interfaz de consulta, no cumplen con las condiciones para ser consideradas una API, sin workarounds.
