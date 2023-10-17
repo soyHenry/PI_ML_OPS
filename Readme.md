@@ -46,41 +46,37 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 <sub> Debes crear las siguientes funciones para los endpoints que se consumirán en la API, recuerden que deben tener un decorador por cada una (@app.get(‘/’)).<sub/>
 
 
-+ def **userdata( *`User_id` : str* )**:
-    Debe devolver `cantidad` de dinero gastado por el usuario, el `porcentaje` de recomendación en base a reviews.recommend y `cantidad de items`.
++ def **PlayTimeGenre( *`genero` : str* )**:
+    Debe devolver `año` con mas horas jugadas para dicho género.
+  
+Ejemplo de retorno: {"Año de lanzamiento con más horas jugadas para Género X" : 2013}
 
-+ def **countreviews( *`YYYY-MM-DD` y `YYYY-MM-DD` : str* )**:
-    `Cantidad de usuarios` que realizaron reviews entre las fechas dadas y, el `porcentaje` de recomendación de los mismos en base a reviews.recommend.
++ def **UserForGenre( *`genero` : str* )**:
+    Debe devolver el usuario que acumula más horas jugadas para el género dado y una lista de la acumulación de horas jugadas por año.
 
-+ def **genre( *`género` : str* )**:
-    Devuelve el `puesto` en el que se encuentra un género sobre el ranking de los mismos analizado bajo la columna PlayTimeForever. 
+Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjss09sdf,
+			     "Horas jugadas":[{Año: 2013, Horas: 203}, {Año: 2012, Horas: 100}, {Año: 2011, Horas: 23}]}
 
-+ def **userforgenre( *`género` : str* )**:
-    `Top 5` de usuarios con más horas de juego en el género dado, con su URL (del user) y user_id.
++ def **UsersRecommend( *`año` : int* )**:
+   Devuelve el top 3 de juegos MÁS recomendados por usuarios para el año dado. (reviews.recommend = True y comentarios positivos/neutrales)
+  
+Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
-+ def **developer( *`desarrollador` : str* )**:
-    `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
-Ejemplo de salida:
-    | Activision ||
-    |----------|----------|
-    | Año  | Contenido Free  |
-    | 2023   | 27% |
-    | 2022    | 25%   |
-    | xxxx    | xx%   |
-
++ def **UsersNotRecommend( *`año` : int* )**:
+   Devuelve el top 3 de juegos MENOS recomendados por usuarios para el año dado. (reviews.recommend = False y comentarios negativos)
+  
+Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
 + def **sentiment_analysis( *`año` : int* )**:
     Según el año de lanzamiento, se devuelve una lista con la cantidad de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento. 
 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ejemplo de retorno: *{Negative = 182, Neutral = 120, Positive = 278}*
-
-
+Ejemplo de retorno: {Negative = 182, Neutral = 120, Positive = 278}
 
 <br/>
 
 
 > `Importante`<br>
-El MVP _tiene_ que ser una API que pueda ser consumida segun los criterios de [API REST o RESTful](https://rockcontent.com/es/blog/api-rest/). Algunas herramientas como por ejemplo, Streamlit, si bien pueden brindar una interfaz de consulta, no cumplen con las condiciones para ser consideradas una API, sin workarounds.
+El MVP _tiene_ que ser una API que pueda ser consumida segun los criterios de [API REST o RESTful](https://rockcontent.com/es/blog/api-rest/) desde cualquier dispositivo conectado a internet. Algunas herramientas como por ejemplo, Streamlit, si bien pueden brindar una interfaz de consulta, no cumplen con las condiciones para ser consideradas una API, sin workarounds.
 
 
 **`Deployment`**: Conoces sobre [Render](https://render.com/docs/free#free-web-services) y tienes un [tutorial de Render](https://github.com/HX-FNegrete/render-fastapi-tutorial) que te hace la vida mas fácil :smile: . También podrías usar [Railway](https://railway.app/), o cualquier otro servicio que permita que la API pueda ser consumida desde la web.
