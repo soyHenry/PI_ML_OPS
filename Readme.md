@@ -64,17 +64,17 @@ Ejemplo de salida:
 
 Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjss09sdf,
 			     "Horas jugadas":[{Año: 2013, Horas: 203}, {Año: 2012, Horas: 100}, {Año: 2011, Horas: 23}]}
-
-+ def **UsersWorstDeveloper( *`año` : int* )**:
-   Devuelve el top 3 de desarrolladoras con juegos MENOS recomendados por usuarios para el año dado. (reviews.recommend = False y comentarios negativos)
+	
++ def **best_developer_year( *`año` : int* )**:
+   Devuelve el top 3 de desarrolladores con juegos MÁS recomendados por usuarios para el año dado. (reviews.recommend = True y comentarios positivos)
   
 Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
-+ def **sentiment_analysis( *`desarrolladora` : str* )**:
-    Según el desarrollador/developer, se devuelve un diccionario con el nombre del desarrollador como llave y una lista con la cantidad total 
-    de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento como valor. 
++ def **developer( *`desarrolladora` : str* )**:
+    Según el desarrollador, se devuelve un diccionario con el nombre del desarrollador como llave y una lista con la cantidad total 
+    de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento como valor positivo o negativo. 
 
-Ejemplo de retorno: {'Valve' : [Negative = 182, Neutral = 120, Positive = 278]}
+Ejemplo de retorno: {'Valve' : [Negative = 182, Positive = 278]}
 
 <br/>
 
