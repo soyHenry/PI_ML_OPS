@@ -49,12 +49,13 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 + def **developer( *`desarrollador` : str* )**:
     `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
 Ejemplo de salida:
-    | Activision ||
-    |----------|----------|
-    | Año  | Contenido Free  |
-    | 2023   | 27% |
-    | 2022    | 25%   |
-    | xxxx    | xx%   |
+
+| Año  | Cantidad de Items | Contenido Free  |
+|------|-------------------|------------------|
+| 2023 | 50                | 27%              |
+| 2022 | 45                | 25%              |
+| xxxx | xx                | xx%              |
+
 
 + def **userdata( *`User_id` : str* )**:
     Debe devolver `cantidad` de dinero gastado por el usuario, el `porcentaje` de recomendación en base a reviews.recommend y `cantidad de items`.
