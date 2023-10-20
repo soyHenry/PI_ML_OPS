@@ -48,7 +48,7 @@ Debes empezar desde 0, haciendo un trabajo rápido de **`Data Engineer`** y tene
 
 + def **developer( *`desarrollador` : str* )**:
     `Cantidad` de items y `porcentaje` de contenido Free por año según empresa desarrolladora. 
-Ejemplo de salida:
+Ejemplo de retorno:
 
 | Año  | Cantidad de Items | Contenido Free  |
 |------|-------------------|------------------|
