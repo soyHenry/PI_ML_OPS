@@ -73,7 +73,7 @@ Ejemplo de retorno: {"Usuario con más horas jugadas para Género X" : us213ndjs
   
 Ejemplo de retorno: [{"Puesto 1" : X}, {"Puesto 2" : Y},{"Puesto 3" : Z}]
 
-+ def **developer( *`desarrolladora` : str* )**:
++ def **developer_reviews_analysis( *`desarrolladora` : str* )**:
     Según el desarrollador, se devuelve un diccionario con el nombre del desarrollador como llave y una lista con la cantidad total 
     de registros de reseñas de usuarios que se encuentren categorizados con un análisis de sentimiento como valor positivo o negativo. 
 
